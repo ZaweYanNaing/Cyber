@@ -275,3 +275,9 @@ $pageDesc = 'Explore Myanmar Cyber Laws in English and Burmese — Cyber Law Awa
 
     </div>
 </section>
+
+<?php 
+
+include 'footer.php';
+
+?>
