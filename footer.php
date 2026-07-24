@@ -62,7 +62,7 @@ if ($lang === 'mm') {
                 </h3>
                 <ul class="space-y-2">
                     <li>
-                        <a href="<?php echo BASE_URL; ?>/index.php" class="text-purple-400/70 hover:text-purple-300 text-sm transition-colors">
+                        <a href="index.php" class="text-purple-400/70 hover:text-purple-300 text-sm transition-colors">
                             <i class="fas fa-chevron-right text-xs mr-2"></i>
                             <?php
                             if ($isMM) {
@@ -74,7 +74,7 @@ if ($lang === 'mm') {
                         </a>
                     </li>
                     <li>
-                        <a href="<?php echo BASE_URL; ?>/index.php#laws" class="text-purple-400/70 hover:text-purple-300 text-sm transition-colors">
+                        <a href="/index.php#laws" class="text-purple-400/70 hover:text-purple-300 text-sm transition-colors">
                             <i class="fas fa-chevron-right text-xs mr-2"></i>
                             <?php
                             if ($isMM) {
@@ -86,7 +86,7 @@ if ($lang === 'mm') {
                         </a>
                     </li>
                     <li>
-                        <a href="<?php echo BASE_URL; ?>/search.php" class="text-purple-400/70 hover:text-purple-300 text-sm transition-colors">
+                        <a href="/search.php" class="text-purple-400/70 hover:text-purple-300 text-sm transition-colors">
                             <i class="fas fa-chevron-right text-xs mr-2"></i>
                             <?php
                             if ($isMM) {
@@ -128,7 +128,7 @@ if ($lang === 'mm') {
         <div class="border-t border-purple-900/40 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
             <p class="text-purple-500/60 text-xs">
                 
-                &copy; <?php echo date('Y'); ?> <?php echo SITE_NAME; ?>.
+                &copy; <?php echo date('Y'); ?> Cyber Law Awareness System.
                 <?php
                 if ($isMM) {
                     echo 'မူပိုင်ခွင့် အာမခံ.';

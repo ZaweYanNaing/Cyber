@@ -1,36 +1,20 @@
 <?php
-// ============================================================
-// config/database.php — Database Connection (mysqli)
-// ============================================================
+// database.php — DB Connection & Helpers
 
-// --- Settings ---
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');       // Change if needed
-define('DB_PASS', '');           // Change if needed
-define('DB_NAME', 'cyber_law_db');
+$host = 'localhost';
+$user = 'root';
+$pass = '';
+$db   = 'cyber_law_db';
 
-define('SITE_NAME', 'Cyber Law Awareness System');
-define('BASE_URL',  'http://localhost/cyber_law_aweness_system');
-define('UPLOAD_DIR', __DIR__ . '/../uploads/');
-define('UPLOAD_URL', BASE_URL . '/uploads/');
-define('MAX_FILE_SIZE', 50 * 1024 * 1024); // 50 MB
-
-// --- Connect to MySQL ---
-$conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+// Connect
+$conn = new mysqli($host, $user, $pass, $db);
 $conn->set_charset('utf8mb4');
 
-// Check connection
 if ($conn->connect_error) {
-    die('<div style="font-family:sans-serif;color:red;padding:2rem;">
-         <h2>Database Error</h2>
-         <p>' . $conn->connect_error . '</p>
-         <p>Please check your config/database.php settings.</p>
-         </div>');
+    die('<p style="color:red">DB Error: ' . $conn->connect_error . '</p>');
 }
 
-// ============================================================
-// Helper Functions
-// ============================================================
+// ── Helpers ──────────────────────────────────────────────────
 
 // Safely print text (prevent XSS)
 function e($str) {
@@ -54,6 +38,6 @@ function requireAdmin() {
         session_start();
     }
     if (empty($_SESSION['admin_id'])) {
-        redirect(BASE_URL . '/admin/login.php');
+        redirect('/Cyber_Test/admin/login.php');
     }
 }
